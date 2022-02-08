@@ -9,7 +9,7 @@ export default function TripList() {
     const [url, setUrl] = useState('http://localhost:3000/trips')
 
     // Calling the custom useFetch hook
-    const { data: trips, isPending, error } = useFetch(url)
+    const { data: trips, isPending, error, options } = useFetch(url, { type: 'GET'})
 
 
     return (
